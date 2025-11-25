@@ -90,19 +90,29 @@
                 </div>
                 <div class="timer">
                     <p class="timer-label">Tiempo transcurrido</p>
-                    <span>10:00 minutos</span>
+                    <div class="cronometer-content">
+                        <span id="cronometer">10:00</span>
+                        <p>minutos</p>
+                    </div>
+                    
                 </div>
                 <button class="btn-restart">JUGAR DE NUEVO <br>REINICIAR</button>
             </div>
            
         </div>
-        <div class="instructions-paragraph">
-            <h2 class="title-instructions">Instrucciones:</h2>
-            <p>Lorem ipsum dolor sit amet consectetur 
-            adipisicing elit. Beatae deserunt, error labore 
-            distinctio minima modi ea ipsum dolorem tenetur impedit.</p>
-        </div>
     </main>
+    <div class="modal-instrucciones">
+        <div class="modal-contenido">
+            <h3>🧠 ¡Bienvenido al Juego de Memoria!</h3>
+            <p>Tu misión es encontrar todos los pares de cartas iguales en el menor número de intentos posible.</p>
+            <ul>
+                <li>Haz clic en dos cartas para voltearlas.</li>
+                <li>Si coinciden, se quedan fijas.</li>
+                <li>Si fallas, se voltean después de 1 segundo.</li>
+            </ul>
+        <button id="btn-iniciar-juego" class="btn-principal">¡Empezar a Jugar!</button>
+        </div>
+    </div>
     <footer>
     </footer>
     <script src="actions.js"></script>
