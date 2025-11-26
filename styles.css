@@ -87,8 +87,8 @@ body {
 
 .main-container {
     display: flex;
-    max-height: 100vh;
-    justify-content: space-around;
+    width: max-content;
+    justify-content: space-around;   
     padding: 50px;
 }
 
@@ -120,10 +120,6 @@ body {
 
 .card.is-flipped {
     transform: rotateY(180deg);
-}
-
-.matched {
-    opacity: 0.8;
 }
 
 .card-front {
@@ -160,6 +156,7 @@ body {
     display: flex;
     flex-direction: column;
     height: max-content;
+    width: max-content;
     align-items: center;
     padding: 20px;
     background-color: var(--terciary);
@@ -196,4 +193,43 @@ body {
 .btn-restart:hover {
    transform: rotate(10deg);
    transition: transform 0.3s ease-in-out;
+}
+
+@media (max-width: 600px) {
+.title-cards__labtica {   
+    font-size: 0.6rem;   
+}
+
+.main-container {
+    flex-direction: column;    
+    align-items: center;
+    padding: 10px;
+    
+}
+
+.cards-container {  
+    height: max-content;
+    gap: 5px; 
+    max-width: max-content;  
+    margin-bottom: 20px; 
+}
+
+.card , .card-front, .card-back {
+    width: 50px;
+    height: 80px;
+    font-size: 0.4rem;
+}
+
+.status-indicators p {
+  font-size: 0.8rem;
+}
+
+
+.btn-restart {
+    margin: 5px;
+    font-size: 0.4rem;
+}
+
+
+
 }
