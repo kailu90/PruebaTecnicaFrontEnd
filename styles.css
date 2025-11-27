@@ -240,6 +240,7 @@ body {
 .timer {
     display: flex;
     flex-direction: row;
+    font-size: 2rem;
 }
 
 .status-indicators p, .status-indicators span {
@@ -377,6 +378,7 @@ body {
 .status-indicators span {
     width: 40px;
     margin: 0 10px;
+    font-size: 0.8rem;
 }
 
 .btn-restart {
