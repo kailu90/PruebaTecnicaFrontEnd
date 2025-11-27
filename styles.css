@@ -267,13 +267,14 @@ body {
 }
 
 .card, .card-front, .card-back {
-    width: 50px;
-    height: 80px;
+    width: 70px;
+    height: 120px;
     font-size: 0.4rem;
 }
 
 .status-indicators {
   padding: 10px;
+  width: 150px;
 }
 
 .status-indicators p {
@@ -281,7 +282,8 @@ body {
 }
 
 .status-indicators span {
-  width: 40px;
+    width: 40px;
+    margin: 0 10px;
 }
 
 .btn-restart {
@@ -290,7 +292,7 @@ body {
     margin: 5px;
     font-size: 0.4rem;
     bottom: 10px;
-    right: 10px;
+    right: 30px;
     background-color: var(--secondary);
     box-shadow: 0 4px 0 var(--secondary); 
 }
