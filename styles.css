@@ -8,6 +8,7 @@
     --primary: #6a98c0;
     --secondary: #e9d75f;
     --terciary:  #e95f5f;
+    --terciary-dark: #cc3333;
 }
 
 
@@ -28,14 +29,16 @@
     z-index: 1000; 
 }
 
-.modal-contenido {
-    background-color: #ffffff;
-    color: #333;
+.modal-contenido {   
+    color: var(--secondary);
     padding: 30px;
     border-radius: 12px;
     max-width: 450px;
     width: 90%;
     text-align: center;
+    background-image: url(image/fondopizza.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
     transform: scale(1);
     transition: transform 0.3s ease-out;
@@ -45,21 +48,23 @@
     display: none;
 }
 
-
 .btn-principal {
-    background-color: var(--primary);
-    color: white;
+    background-color: var(--secondary);
+    color: var(--terciary);
     border: none;
     padding: 10px 20px;
     margin-top: 20px;
     border-radius: 6px;
     cursor: pointer;
     font-size: 1.1em;
+    font-weight: bold;
     transition: background-color 0.2s;
 }
 
 .btn-principal:hover {
-    background-color: #0056b3;
+    background-color: var(--terciary);
+    border: var(--secondary);
+    color: var(--secondary);
 }
 
 
@@ -80,7 +85,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .title-cards__labtica {
@@ -88,10 +93,14 @@ body {
     padding: 20px;
     font-size: 1.2rem;
     font-family: Georgia;
-    color: #ffffff;
+    color: rgba(221, 255, 0, 0.822);;
+    box-shadow: 0 10px 25px rgba(221, 255, 0, 0.822);
+    border-radius: 50px;
+    background-color: transparent
 }
 
 .main-container {
+    position: relative;
     display: flex;
     width: max-content;
     justify-content: space-around;   
@@ -121,8 +130,7 @@ body {
     border-radius: 10px;
     cursor: pointer;
     transform-style: preserve-3d;
-    transition: transform 0.6s ease-in-out;
-    
+    transition: transform 0.6s ease-in-out;   
 }
 
 .card.is-flipped {
@@ -134,13 +142,12 @@ body {
     background-image: url(image/fondofront1.png);
     background-size: cover;
     background-repeat: no-repeat;
-    color: var(--terciary);
+    color: var(--terciary);    
 }
 
 .card-back {
     background-color: var(--secondary);
     transform: rotateY(180deg);
-
 }
 
 .card-front, .card-back {    
@@ -172,8 +179,21 @@ body {
     width: max-content;
     align-items: center;
     padding: 20px;
-    background-color: var(--terciary);
+    background-image: url(image/fondopizza.jpg);
+    background-position: center;
+    background-size: cover;
     border-radius: 10px;
+    color: var(--secondary);
+}
+
+.status-top {
+    display: flex;
+    flex-direction: row;
+}
+
+.timer {
+    display: flex;
+    flex-direction: row;
 }
 
 .status-indicators p, .status-indicators span {
@@ -183,34 +203,53 @@ body {
     margin: auto;    
 }
 
+.text-shadow {
+    text-shadow: 1px 1px 0px #040404;;
+}
+
 .status-indicators p {
     font-size: 1.2rem;
 }
 
 .status-indicators span {
-    width: max-content;
+    width: 100px;
     background-color: #ffffff;
     border-radius: 5px;
     padding: 5px;
     margin: 5px auto;
 }
 
+.status-text {
+    color: black;
+}
+
 .btn-restart {
+    width: 100px;
+    height: 50px;
     padding: 5px;
-    margin: 5px auto;
+    position: absolute;
+    bottom: 50px;
+    right: 100px;
     margin: 10px auto;
-    border-radius: 5px;
+    border-radius: 50%;
+    border-width: 0.5px;  
+    background-color: var(--terciary-dark);
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1rem;
+    box-shadow: 0 8px 0 var(--terciary-dark); 
     cursor: pointer;
 }
 
-.btn-restart:hover {
-   transform: rotate(10deg);
-   transition: transform 0.3s ease-in-out;
+.btn-restart:hover,
+.btn-restart:active {   
+    transform: translateY(6px);   
+    box-shadow: 0 0 0 var(--terciary-dark); 
 }
 
 @media (max-width: 600px) {
 .title-cards__labtica {   
-    font-size: 0.6rem;   
+    font-size: 0.4rem;   
 }
 
 .main-container {
@@ -233,16 +272,26 @@ body {
     font-size: 0.4rem;
 }
 
-.status-indicators p {
-  font-size: 0.8rem;
+.status-indicators {
+  padding: 10px;
 }
 
+.status-indicators p {
+  font-size: 0.4rem;
+}
+
+.status-indicators span {
+  width: 40px;
+}
 
 .btn-restart {
+    width: 50px;
+    height: 25px;
     margin: 5px;
     font-size: 0.4rem;
+    bottom: 10px;
+    right: 10px;
+    background-color: var(--secondary);
+    box-shadow: 0 4px 0 var(--secondary); 
 }
-
-
-
 }

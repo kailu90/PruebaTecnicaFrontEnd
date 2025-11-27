@@ -83,40 +83,34 @@
                 </div>
             </div>
             <div class="status-indicators">
-                 <div class="matched">
-                    <p class="matched-label">Cartas Emparejadas</p>
-                    <span id="matched-attempts">10</span>
-                </div>
-                <div class="counter">
-                    <p class="counter-label">Número Intentos</p>
-                    <span id="counter-attempts">10</span>
-                </div>
-                <div class="timer">
-                    <p class="timer-label">Tiempo transcurrido</p>
-                    <div class="cronometer-content">
-                        <span id="cronometer">10:00</span>
-                        <p>minutos</p>
+                <div class="status-top">
+                    <div class="matched">
+                        <p class="matched-label text-shadow">Emparejadas</p>
+                        <span class="status-text" id="matched-attempts">10</span>
                     </div>
-                    
-                </div>
-                <button class="btn-restart">JUGAR DE NUEVO <br>REINICIAR</button>
+                    <div class="counter">
+                        <p class="counter-label text-shadow">Intentos</p>
+                        <span class="status-text" id="counter-attempts">10</span>
+                    </div>
+                </div>                
+                <div class="timer">
+                    <p class="timer-label text-shadow">Tiempo<span class="status-text" id="cronometer">10:00</span>minutos</p>
+                </div>                
             </div>
-           
+            <button class="btn-restart">
+                <p>Reiniciar</p>
+            </button>           
         </div>
     </main>
     <div class="modal-instrucciones">
         <div class="modal-contenido">
-            <h3>El Gran Objetivo: Preparar nuestra Pizza MAJESTUOSA 🍕</h3>
-            <p>Tu misión es desbloquear los **8 ingredientes únicos** resolviendo el puzzle de memoria.</p>
-            <p>🕹️ ¿Cómo Jugar? (Juego de Parejas)</p>
-            <ul>
-                <li>El tablero tiene **8 parejas (16 cartas)** de ingredientes boca abajo.</li>
-                <li>Voltea **dos cartas** en cada turno. Si las cartas son idénticas, ¡dejan un ingrediente desbloqueado!.</li>
-                <li>Encuentra las **8 parejas** para completar la receta y preparar tu pizza.</li>
-                <li>¡Hazlo en el **menor tiempo posible** para conseguir la puntuación de Chef Maestro!</li>
-            </ul>
-        <button id="btn-iniciar-juego" class="btn-principal">¡Empezar a Jugar!</button>
-        </div>
+            <h3>Prepara nuestra Pizza</h3>
+            <p>Desbloquear los 8 ingredientes únicos resolviendo el puzzle de memoria.</p>
+            <p>Voltea dos cartas en cada turno.</p>
+            <p>cartas idénticas.</p>
+            <p>INGREDIENTE DESBLOQUEADO!.</p>            
+        <button id="btn-iniciar-juego" class="btn-principal text-shadow">¡Empezar a Jugar!</button>
+    </div>
     </div>
 
     

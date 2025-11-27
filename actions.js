@@ -76,7 +76,7 @@
             matched++;   
             contadorAciertosDisplay.textContent = matched;          
             console.log(matched)
-            dejarFijasCards();
+            dejarFijasCards();           
             if (matched === 8) {
             Ganaste();
         }
