@@ -106,7 +106,7 @@ body {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin-top: 20px;
+    margin-top: 10px;
     align-items: center;
     background-image: url(image/fondo1.png);
     background-size: cover;
@@ -131,7 +131,7 @@ body {
     display: flex;
     width: max-content;
     justify-content: space-around;   
-    padding: 50px;
+    padding: 20px;
 }
 
 .cards-container {  
@@ -275,7 +275,7 @@ body {
     padding: 5px;
     position: absolute;
     bottom: 50px;
-    right: 100px;
+    right: 20px;
     margin: 10px auto;
     border-radius: 50%;
     border-width: 0.5px;  
@@ -310,6 +310,7 @@ body {
 @media (max-width: 1000px) {
 
 body {
+    margin: 0;
     background-image: url(image/fondo1m.png);
 }
 
@@ -341,7 +342,8 @@ body {
 
 .title-cards__labtica {   
     font-size: 0.6rem;
-    text-align: center;  
+    text-align: center;
+    margin: 0;  
 }
 
 .main-container {
