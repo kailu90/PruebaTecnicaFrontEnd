@@ -66,9 +66,12 @@
 
 .modal-contenido-ganaste {
     display: flex;
+    align-items: center;
     width: 1000px;
     padding: 30px;
+    font-size: 2rem;
 }
+
 
 .hidden {
     display: none;
@@ -366,6 +369,7 @@ body {
 .modal-contenido-ganaste {
     padding: 20px 10px ;
     max-width: 400px;
+    font-size: 0.6rem;
 }
 
 .modal-ganaste img {
