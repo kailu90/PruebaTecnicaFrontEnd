@@ -139,9 +139,6 @@ body {
 
 .card-front {
     text-justify:end;
-    background-image: url(image/fondofront1.png);
-    background-size: cover;
-    background-repeat: no-repeat;
     color: var(--terciary);    
 }
 
