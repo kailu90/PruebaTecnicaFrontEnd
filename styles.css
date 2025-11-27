@@ -170,7 +170,10 @@ body {
 
 .card-front {
     text-justify:end;
-    color: var(--terciary);    
+    color: var(--terciary); 
+    background-image: url(image/fondofront1m.png);   
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .card-back {
