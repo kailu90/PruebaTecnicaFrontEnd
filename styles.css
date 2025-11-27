@@ -249,7 +249,8 @@ body {
 
 @media (max-width: 1000px) {
 .title-cards__labtica {   
-    font-size: 0.4rem;   
+    font-size: 0.6rem;
+    text-align: center;  
 }
 
 .main-container {
