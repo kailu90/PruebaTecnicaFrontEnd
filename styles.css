@@ -16,7 +16,8 @@
 
 /*********************ESTILOS MODAL INICIO***********************/
 
-.modal-instrucciones {
+
+.modal-instrucciones , .modal-ganaste {
     position: fixed; 
     top: 0;
     left: 0;
@@ -29,19 +30,44 @@
     z-index: 1000; 
 }
 
+.modal-ganaste img {
+    margin-top: 20px;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+.title-ganaste {
+    font-size: 4rem;
+    text-decoration: underline;
+}
+
 .modal-contenido {   
+    position: relative;
     color: var(--secondary);
     padding: 30px;
     border-radius: 12px;
-    max-width: 450px;
     width: 90%;
     text-align: center;
-    background-image: url(image/fondopizza.jpg);
+    background-image: url(image/fondomadera.jpg);
+    background-position: bottom;
     background-size: cover;
     background-repeat: no-repeat;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    text-shadow: 2 10px 25px rgba(0, 0, 0, 0.8);
     transform: scale(1);
     transition: transform 0.3s ease-out;
+    font-size: 2.6rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.modal-contenido p {
+    padding: 5px;
+}
+
+.modal-contenido-ganaste {
+    display: flex;
+    width: 1000px;
+    padding: 30px;
 }
 
 .hidden {
@@ -80,6 +106,7 @@ body {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    margin-top: 20px;
     align-items: center;
     background-image: url(image/fondo1.png);
     background-size: cover;
@@ -131,6 +158,10 @@ body {
     cursor: pointer;
     transform-style: preserve-3d;
     transition: transform 0.6s ease-in-out;   
+   animation-name: bounceInRotate;
+    animation-duration: 0.8s; /* Un poco más larga para que el rebote se note */
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Curva de rebote profesional */
+    animation-fill-mode: backwards;
 }
 
 .card.is-flipped {
@@ -168,6 +199,21 @@ body {
    transform: rotateY(180deg);
    transition: transform 0.5s ease-in-out;   
 }
+
+@keyframes bounceInRotate {
+    0% {
+        opacity: 0;
+        transform: scale(0.3) rotateZ(-15deg); /* Inicia pequeña y ligeramente girada */
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.1) rotateZ(5deg); /* Crece más de lo normal (el rebote) y gira al otro lado */
+    }
+    100% {
+        transform: scale(1) rotateZ(0); /* Estado final: tamaño normal y sin giro */
+    }
+}
+
 
 .status-indicators {
     display: flex;
@@ -221,8 +267,8 @@ body {
 }
 
 .btn-restart {
-    width: 100px;
-    height: 50px;
+    width: 200px;
+    height: 100px;
     padding: 5px;
     position: absolute;
     bottom: 50px;
@@ -238,11 +284,25 @@ body {
     cursor: pointer;
 }
 
+.btn-restart-ganaste {
+    bottom: 30px;
+    left: 140px;
+    color: var(--terciary-dark);
+    background-color: var(--secondary);
+    box-shadow: 0 10px 0 var(--secondary); 
+    border-color:#e9d75f;
+    margin: 10px;
+}
+
 .btn-restart:hover,
 .btn-restart:active {   
     transform: translateY(6px);   
     box-shadow: 0 0 0 var(--terciary-dark); 
 }
+
+
+/********************VISTA PANTALLAS MENOS A 1000 PX**********/
+
 
 @media (max-width: 1000px) {
 .title-cards__labtica {   
@@ -253,8 +313,7 @@ body {
 .main-container {
     flex-direction: column;    
     align-items: center;
-    padding: 10px;
-    
+    padding: 10px;    
 }
 
 .cards-container {  
@@ -294,4 +353,5 @@ body {
     background-color: var(--secondary);
     box-shadow: 0 4px 0 var(--secondary); 
 }
+
 }

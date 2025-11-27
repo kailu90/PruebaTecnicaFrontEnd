@@ -9,18 +9,23 @@
     let contadorAciertosDisplay;
     let modalInstrucciones;
     let btnIniciarJuego;
-    let segundos;
-    let minutos;
-    let hora;
+    let segundos = 0;
+    let minutos = 0;
     let timeInterval;
     let timeDisplay;
-
-    
+    let modalGanaste;
+    let btnReiniciarGanaste;
 
     function iniciarJuego(event){//esta función escucha evento click en botón para ocultar modal y desbloquear las cartas para iniciar juego.
         modalInstrucciones.classList.add('hidden');
         lockBoard = false;
         console.log("Juego Iniciado");
+
+        if (timeInterval) {
+        clearInterval(timeInterval); 
+    }   
+    
+    timeInterval = setInterval(startTimer, 1000);
 
     }
 
@@ -38,6 +43,9 @@
         timeDisplay.textContent = formatTime(minutos) + ":" + formatTime(segundos);
     }
 
+    function formatTime(val) {
+    return val < 10 ? '0' + val : val;
+    }
     
     function flipCard(event) {//esta función escucha el evento click, y gira la carta, asigna valor al turno y llama a la siguiente función(CheckForMatch).
         const cardElement = event.currentTarget;
@@ -89,7 +97,7 @@
     function dejarFijasCards() {//deshabilitar EventListeners para que no sean escuchados y cartas queden fijas
             primeraCarta.removeEventListener('click', flipCard);
             segundaCarta.removeEventListener('click', flipCard);
-    resetearTurno(); 
+            resetearTurno(); 
     }
 
     function girarCards(){
@@ -129,6 +137,17 @@
     resetearTurno();
     console.log("Tablero y juego reseteados completamente.");
     modalInstrucciones.classList.remove('hidden');
+    modalGanaste.classList.add('hidden');
+    if (timeInterval) {
+        clearInterval(timeInterval);
+        timeInterval = null;
+    }
+    segundos = 0;
+    minutos = 0;
+    
+    if (timeDisplay) {
+        timeDisplay.textContent = '00:00';
+    }
 }
 
 
@@ -136,11 +155,12 @@
 
     modalInstrucciones = document.querySelector('.modal-instrucciones');
     btnIniciarJuego = document.getElementById('btn-iniciar-juego');
+    modalGanaste = document.querySelector('.modal-ganaste');
+    btnReiniciarGanaste = document.querySelector(".btn-restart-ganaste");
     
     if (btnIniciarJuego) {
         btnIniciarJuego.addEventListener("click", iniciarJuego);    
-    }    
-
+    }  
 
     timeDisplay = document.getElementById('cronometer');
 
@@ -170,10 +190,14 @@
     }
 
     btnIniciarJuego.addEventListener('click', iniciarJuego);
-
-
+    btnReiniciarGanaste.addEventListener('click', reiniciarJuego);
+    
 });
 
 function Ganaste() {
-   
+    modalGanaste.classList.remove('hidden'); 
+    if (timeInterval) {
+        clearInterval(timeInterval);
+    }  
+    console.log("GANASTE!")    
 }
