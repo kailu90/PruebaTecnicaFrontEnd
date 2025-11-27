@@ -179,6 +179,40 @@ body {
 .card-back {
     background-color: var(--secondary);
     transform: rotateY(180deg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card-back1 {
+    background-image: url(image/tomatecherrym.jpg);      
+}
+
+.card-back2 {
+    background-image: url(image/quesom.png);      
+}
+
+.card-back3 {
+    background-image: url(image/masam.jpg);      
+}
+
+.card-back4 {
+    background-image: url(image/carnem.jpg);      
+}
+
+.card-back5 {
+    background-image: url(image/cebollam.jpg);      
+}
+
+.card-back6 {
+    background-image: url(image/champiñonesm.jpg);      
+}
+
+.card-back7 {
+    background-image: url(image/vinagrebalsamicom.jpg);      
+}
+
+.card-back7 {
+    background-image: url(image/albahacam.jpg);      
 }
 
 .card-front, .card-back {    
@@ -327,9 +361,11 @@ body {
 
 .modal-contenido p {   
     padding: 0;
-}    
+}   
+
 .modal-contenido-ganaste {
     padding: 20px 10px ;
+    max-width: 400px;
 }
 
 .modal-ganaste img {
@@ -369,6 +405,7 @@ body {
 .status-indicators {
     padding: 10px;
     width: 150px;
+    background-image: url(image/fondopizzam.jpg);
 }
 
 .status-indicators p {
@@ -390,6 +427,10 @@ body {
     right: 30px;
     background-color: var(--secondary);
     box-shadow: 0 4px 0 var(--secondary); 
+}
+
+.btn-restart-ganaste {
+    position: fixed;
 }
 
 }
