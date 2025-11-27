@@ -247,7 +247,7 @@ body {
     box-shadow: 0 0 0 var(--terciary-dark); 
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
 .title-cards__labtica {   
     font-size: 0.4rem;   
 }
