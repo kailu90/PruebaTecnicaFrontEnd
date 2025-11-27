@@ -89,7 +89,7 @@ body {
 }
 
 .title-cards__labtica {
-    margin-top: 10px;
+    margin: 20px auto;
     padding: 20px;
     font-size: 1.2rem;
     font-family: Georgia;
