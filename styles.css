@@ -123,10 +123,9 @@ body {
     padding: 20px;
     font-size: 1.2rem;
     font-family: Georgia;
-    color: rgba(221, 255, 0, 0.822);;
-    box-shadow: 0 10px 25px rgba(221, 255, 0, 0.822);
-    border-radius: 50px;
-    background-color: transparent
+    color: var(--secondary);   
+    border-radius: 10px;
+    background-image: url(image/fondomaderam.jpg);
 }
 
 .main-container {
@@ -177,6 +176,10 @@ body {
     background-image: url(image/fondofront1m.png);   
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.card-front:hover {
+    zoom: 105%;
 }
 
 .card-back {
@@ -401,6 +404,8 @@ body {
     font-size: 0.6rem;
     text-align: center;
     margin: 0;  
+    padding: 10px;
+    background-image: url(image/fondomaderam.jpg);
 }
 
 .main-container {

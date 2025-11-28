@@ -30,7 +30,7 @@
     }
 
 
-    function startTimer() {//esta función es el cronómetro para contabilizar cuanto dura el reto.
+    function startTimer() {//esta función inicia el cronómetro para contabilizar cuanto dura el reto.
         segundos++;
 
         if (segundos === 60) {

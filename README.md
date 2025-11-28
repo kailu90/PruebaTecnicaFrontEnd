@@ -1,7 +1,7 @@
-# Juego de Parejas con Tarjetas.
+# Desbloquea los ingredientes de la pizza perfecta.
 
 ## Descripción del Proyecto
-El objetivo del juego es encontrar todos los pares de cartas coincidentes en el menor número de movimientos posible.
+Este es un juego de parejas donde tu misión principal es desbloquear los 8 ingredientes principales necesarios para preparar la pizza perfecta.
 El proyecto está desarrollado bajo principios los lenguajes de HTML, CSS y JS vanilla, sin frameworks.
 
 ### Características Clave:
