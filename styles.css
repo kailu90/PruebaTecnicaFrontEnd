@@ -79,7 +79,7 @@
 
 .btn-principal {
     background-color: var(--secondary);
-    color: var(--terciary);
+    color: #1f0f0f;
     border: none;
     padding: 10px 20px;
     margin-top: 20px;
@@ -91,7 +91,7 @@
 }
 
 .btn-principal:hover {
-    background-color: var(--terciary);
+    background-color: #1f0f0f;
     border: var(--secondary);
     color: var(--secondary);
 }
@@ -133,7 +133,7 @@ body {
     position: relative;
     display: flex;
     width: max-content;
-    justify-content: space-around;   
+    justify-content: flex-start;   
     padding: 20px;
 }
 
@@ -261,8 +261,9 @@ body {
     height: max-content;
     width: max-content;
     align-items: center;
-    padding: 20px;
-    background-image: url(image/fondopizza.jpg);
+    margin-left: 50px;
+    padding: 20px; 
+    background-image: url(image/fondomadera.jpg); 
     background-position: center;
     background-size: cover;
     border-radius: 10px;
@@ -272,6 +273,13 @@ body {
 .status-top {
     display: flex;
     flex-direction: row;
+    
+}
+
+.matched {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
 }
 
 .timer {
@@ -284,22 +292,20 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: auto;    
-}
-
-.text-shadow {
-    text-shadow: 1px 1px 0px #040404;;
+    margin: auto;
+    font-weight: bold;    
 }
 
 .status-indicators p {
     font-size: 1.2rem;
+    padding: 0 10px;
 }
 
 .status-indicators span {
-    width: 100px;
+    width: max-content;
     background-color: #ffffff;
     border-radius: 5px;
-    padding: 5px;
+    padding: 10px;
     margin: 5px auto;
 }
 
@@ -313,24 +319,24 @@ body {
     padding: 5px;
     position: absolute;
     bottom: 50px;
-    right: 20px;
+    right: 40px;
     margin: 10px auto;
     border-radius: 50%;
     border-width: 0.5px;  
-    background-color: var(--terciary-dark);
-    color: #ffffff;
+    background-image: url(image/fondomaderam.jpg);
+    color: var(--secondary);
     font-weight: bold;
     font-size: 1rem;
-    box-shadow: 0 8px 0 var(--terciary-dark); 
+    box-shadow: 0 8px 0 #1f0f0f;
     cursor: pointer;
 }
 
 .btn-restart-ganaste {
-    bottom: 30px;
+    bottom: 50px;
     left: 140px;
-    color: var(--terciary-dark);
+    color: var(--secundary);
     background-color: var(--secondary);
-    box-shadow: 0 10px 0 var(--secondary); 
+    box-shadow: 0 10px 0 #1f0f0f; 
     border-color:#e9d75f;
     margin: 10px;
 }
@@ -367,7 +373,10 @@ body {
 }   
 
 .modal-contenido-ganaste {
+    display: flex;
+    flex-direction: column;
     padding: 20px 10px ;
+    width: 90%;
     max-width: 400px;
     font-size: 0.6rem;
 }
@@ -389,7 +398,7 @@ body {
 
 .main-container {
     flex-direction: column;    
-    align-items: center;
+    align-items: flex-start;
     padding: 10px;    
 }
 
@@ -409,7 +418,7 @@ body {
 .status-indicators {
     padding: 10px;
     width: 150px;
-    background-image: url(image/fondopizzam.jpg);
+    background-image: url(image/fondomaderam.jpg);
 }
 
 .status-indicators p {
@@ -417,20 +426,21 @@ body {
 }
 
 .status-indicators span {
-    width: 40px;
+    width: max-content;
     margin: 0 10px;
     font-size: 0.8rem;
 }
 
 .btn-restart {
-    width: 50px;
-    height: 25px;
+    width: 60px;
+    height: 30px;
     margin: 5px;
     font-size: 0.4rem;
-    bottom: 10px;
-    right: 30px;
-    background-color: var(--secondary);
-    box-shadow: 0 4px 0 var(--secondary); 
+    bottom: 20px;
+    left: 140px;
+    background-image: url(image/fondomaderam.jpg);
+    box-shadow: 0 4px 0 #272516;
+    color: var(--secondary);
 }
 
 .btn-restart-ganaste {
